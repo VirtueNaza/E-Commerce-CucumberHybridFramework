@@ -1,13 +1,11 @@
 Feature: Sign up
 
-As a first time user of the application,
   I want to be able to sign up successfully after providing all mandatory details
 
 
   Background:
     Given user has launched the application
 
-  Scenario: Verify user can Sign Up successfully with valid credentials
     When user clicks on My Account button
     And selects Register
     And enters first name into first name field
@@ -20,6 +18,7 @@ As a first time user of the application,
     And checks Privacy policy checkbox
     And clicks on Continue button
     Then success message should be displayed
+    And user should be signed in automatically
 
 
     Scenario: Validate error message for mismatched passwords in the 'Confirm Password' field.

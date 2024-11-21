@@ -50,7 +50,6 @@ public class DriverFactory {
     }
 
     public static String generateRandomEmail(){
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh mm");
         LocalDateTime dateAndTime = LocalDateTime.now();
 
         String formattedDate = dateAndTime.format(dateTimeFormatter);

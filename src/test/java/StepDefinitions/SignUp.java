@@ -30,7 +30,11 @@ public class SignUp {
         property= propertiesReader.readProperties();
         driver = DriverFactory.getDriver();
 
+    property= propertiesReader.readProperties();
+    driver = DriverFactory.getDriver();
+
     assertEquals(property.getProperty("url"), driver.getCurrentUrl());
+    assertEquals(driver.getCurrentUrl(), property.getProperty("url"));
     }
 
     @When("user clicks on My Account button")
@@ -106,8 +110,10 @@ public class SignUp {
 
        // String actualSuccessMessageDisplayed = accountSuccessPage.verifySuccessMessageDisplayed();
         assertEquals(property.getProperty("successMessage"), accountSuccessPage.verifySuccessMessageDisplayed());
+        String actualSuccessMessageDisplayed = accountSuccessPage.verifySuccessMessageDisplayed();
 
        // assertEquals(actualSuccessMessageDisplayed, property.getProperty("successMessage"));
+        assertEquals(actualSuccessMessageDisplayed, property.getProperty("successMessage"));
     }
 
     @And("user should be signed in automatically")
@@ -117,6 +123,8 @@ public class SignUp {
         assertTrue(accountSuccessPage.logOutButtonIsDisplayed());
 
     }
+        boolean logOutButtonIsDisplayed = accountSuccessPage.logOutButtonIsDisplayed();
+        assertTrue(logOutButtonIsDisplayed);
 
     @And("enters incorrect Password into Password confirm field")
     public void entersIncorrectPasswordIntoPasswordConfirmField() {

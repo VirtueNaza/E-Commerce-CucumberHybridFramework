@@ -12,6 +12,7 @@ public class AccountSuccessPage {
     CommonUtils utils;
 
     public AccountSuccessPage(WebDriver driver){
+
         this.driver = driver;
         this.utils = new CommonUtils(driver);
 

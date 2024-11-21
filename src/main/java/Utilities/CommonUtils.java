@@ -15,6 +15,7 @@ public class CommonUtils {
 
     public CommonUtils(WebDriver driver){
         this.driver = driver;
+
     }
 
     public void clickOnAnElement(WebElement element, long waitingTime){

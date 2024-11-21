@@ -71,7 +71,9 @@ public class RegisterAccountPage {
     }
 
     public void typeTelephoneIntoTelephoneField(String telephoneNumber){
-    utils.typeTextIntoElement(telephoneTextField, telephoneNumber, MyUtils.EXPLICIT_WAIT_TIME );}
+
+       utils.typeTextIntoElement(telephoneTextField, telephoneNumber, MyUtils.EXPLICIT_WAIT_TIME );
+    }
 
     public  void typePasswordIntoPasswordField(String password){
         utils.typeTextIntoElement(passwordTextField, password, MyUtils.EXPLICIT_WAIT_TIME);

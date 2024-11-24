@@ -51,9 +51,10 @@ public class DriverFactory {
 
     public static String generateRandomEmail(){
         LocalDateTime dateAndTime = LocalDateTime.now();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
 
         String formattedDate = dateAndTime.format(dateTimeFormatter);
-        String dateAdnTime = formattedDate.replace(" ", "_").replace("-", "_");
+        String dateAdnTime = formattedDate.replace(" ", "_").replace(":", "_").replace("-", "_");
 
         return "simba" + dateAdnTime + "@malinator.com";
 

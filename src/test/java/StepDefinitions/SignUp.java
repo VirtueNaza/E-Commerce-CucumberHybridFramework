@@ -123,8 +123,7 @@ public class SignUp {
         assertTrue(accountSuccessPage.logOutButtonIsDisplayed());
 
     }
-        boolean logOutButtonIsDisplayed = accountSuccessPage.logOutButtonIsDisplayed();
-        assertTrue(logOutButtonIsDisplayed);
+
 
     @And("enters incorrect Password into Password confirm field")
     public void entersIncorrectPasswordIntoPasswordConfirmField() {

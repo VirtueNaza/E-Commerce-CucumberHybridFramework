@@ -27,8 +27,6 @@ public class HomePage {
     @FindBy(linkText = "Login")
     private WebElement loginButton;
 
-    @FindBy(id = "input-email")
-    private WebElement emailAddressField;
 
 
 
@@ -46,10 +44,6 @@ public class HomePage {
         utils.clickOnAnElement(loginButton, MyUtils.EXPLICIT_WAIT_TIME);
     }
 
-    public void enterEmailIntoEmailAddressField(String emailAddress){
-        utils.typeTextIntoElement(emailAddressField, emailAddress, MyUtils.EXPLICIT_WAIT_TIME);
-
-    }
 
 
 }

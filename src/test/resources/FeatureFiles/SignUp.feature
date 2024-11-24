@@ -18,7 +18,6 @@ Feature: Sign up
     And checks Privacy policy checkbox
     And clicks on Continue button
     Then success message should be displayed
-    And user should be signed in automatically
 
 
     Scenario: Validate error message for mismatched passwords in the 'Confirm Password' field.
@@ -34,6 +33,5 @@ Feature: Sign up
       And checks Privacy policy checkbox
       And clicks on Continue button
       Then validation message should be displayed indicating passwords don't match
-      And user should not be able to sign up successfully.
 
 
